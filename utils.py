@@ -19,7 +19,7 @@ def write_name(name: str) -> str:
     location = ((image_width - text_width)/2, 570)  # Replace with the coordinates you noted. (X, Y)
     d.text(location, name, fill=text_color, font=font)
     # Create a unique name for the file. Feel free to edit the format, this is an example
-    file_name = "generated/" + name + str(random.randint(0, 255)) + ".png"
+    file_name = "generated/" + name + ".png"
     # Save the image
     img.save(file_name)
     # Return the name we generated
