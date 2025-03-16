@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 import random
 
 
-def write_name(name: str) -> str:
+def create_certificate_for(name: str) -> str:
     # Open the Base certificate image
     img = Image.open("SDN_Certificate.png")  # Replace with your base certificate image name
     # Make the image drawable

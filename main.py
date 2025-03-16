@@ -1,5 +1,3 @@
-from utils import write_name
-from send_email import send_certificate
+from read_Excel import generate_and_send_certificate_from_excel
 
-print(write_name("Oluwaseun Adesoga"))
-send_certificate("Oluwaseun Adesoga", "samueladesoga@gmail.com")
+generate_and_send_certificate_from_excel()
