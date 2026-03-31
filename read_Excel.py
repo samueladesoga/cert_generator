@@ -4,7 +4,7 @@ from send_email import send_certificate
 
 def generate_and_send_certificate_from_excel():
     # File path - replace with your actual Excel file path
-    file_path = "Test Participant.xlsx"
+    file_path = "Participants.xlsx"
     
     try:
         # Read the Excel file

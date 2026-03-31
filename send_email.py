@@ -16,15 +16,15 @@ def send_certificate(name: str, email: str):
     from email.mime.application import MIMEApplication
     from email.mime.multipart import MIMEMultipart
     message = MIMEMultipart()
-    message['Subject'] = 'Certificate of Attendance for the Scrum Day Nigeria - Lagos 2025 conference'
-    message['From'] = 'info@valuehut.co'
+    message['Subject'] = 'Certificate of Attendance for the Scrum Day Nigeria 2026 conference'
+    message['From'] = 'info@scrumday.ng'
     message['To'] = email
     # message body
     text = """\
         <html>
           <body>
             <p>Dear %s,<br>
-              Please find attached the certificate of attendance for the Scrum Day Nigeria - Lagos 2025 conference.</p>
+              Please find attached the certificate of attendance for the Scrum Day Nigeria - Lagos 2026 conference.</p>
             <p>I look forward to seeing you at the next year conference.</p>
             <p> Kind Regards,</p>
             <p> Sam Adesoga </p>
@@ -37,8 +37,8 @@ def send_certificate(name: str, email: str):
     message.attach(part)
     # attachment
 
-    part = MIMEApplication(open("generated/" + name +".png", 'rb').read())
-    part.add_header('Content-Disposition', 'attachment', filename=name +".png")
+    part = MIMEApplication(open("generated/" + name + ".pdf", 'rb').read())
+    part.add_header('Content-Disposition', 'attachment', filename=name + ".pdf")
     message.attach(part)
     response = client.send_raw_email(
         Source=message['From'],
